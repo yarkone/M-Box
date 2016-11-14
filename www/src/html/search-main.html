@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<style type="text/css">
+		.mui-bar-nav .mui-icon{
+			color: #000 !important;
+		}
+			.tuijian{
+				width:90%;
+				background: #FFF;
+				min-height: 25rem;
+				margin: 0.5rem auto;
+				border-radius: 10px;
+				border: 1px solid #444;
+				display: -webkit-box;
+				padding:1rem;
+				-webkit-box-sizing: border-box;
+				-webkit-box-orient: vertical;
+			}
+			.tuijian a{
+				margin:0 1rem;
+				line-height: 2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">搜索歌曲</h1>
+		</header>
+		<div class="mui-content" id="mui-content">
+			<div class="mui-input-row mui-search">
+			    <input type="search" id="search"  onkeyup="search(event)" class="mui-input-clear left_search" placeholder="请输入歌曲名称">
+			</div>
+			<div class="tuijian">
+				<p>快速搜索：</p>
+				<a href="javascript:;">七里香</a>
+				<a href="javascript:;" class="goSearch">晴天</a>
+				<a href="javascript:;" class="goSearch">倔强</a>
+				<a href="javascript:;" class="goSearch">初学者</a>
+				<a href="javascript:;" class="goSearch">知足</a>
+				<a href="javascript:;" class="goSearch">拥抱</a>
+				<a href="javascript:;" class="goSearch">黑暗骑士</a>
+				<a href="javascript:;" class="goSearch">旅行的意义</a>
+				<a href="javascript:;" class="goSearch">还有我</a>
+				<a href="javascript:;" class="goSearch">我是一只鱼</a>
+				<a href="javascript:;" class="goSearch">春天花会开</a>
+				<a href="javascript:;" class="goSearch">好久不见</a>
+				<a href="javascript:;" class="goSearch">老男孩</a>
+				<a href="javascript:;" class="goSearch">最长的电影</a>
+				<a href="javascript:;" class="goSearch">阳光宅男</a>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="application/javascript" src="../js/lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			gestureConfig:{
+				doubletap:true
+			}
+		});
+	
+		
+		function search(e) {
+		    if(e.keyCode == 13) {
+		        $("#search").blur();
+		        //所有的plus-*方法写在mui.plusReady中或者后面。
+				mui.plusReady(function() {
+					//获取当前页面所属的Webview窗口对象
+					var self = plus.webview.currentWebview();
+					//创建webview子页
+					var sub = plus.webview.create(
+						"search.html", //子页url
+						"search.html", //子页id
+						{
+							top: '45px',//设置距离顶部的距离
+							bottom: '0px'//设置距离底部的距离
+						},
+						{
+							songName : $("#search").val()
+						}
+					);
+					$("#mui-content").hide();
+					//将webview对象填充到窗口
+					self.append(sub);
+				});
+//		        mui.openWindow({
+//		            id: 'search.html',
+//		            url: 'search.html',
+//		            extras: {
+//		                songName: $("#searchInput").val()
+//		            }
+//		        })
+		    }
+		}
+		
+		$(".goSearch").on("tap",function(){
+			var str = $(this).text();
+			mui.plusReady(function() {
+					//获取当前页面所属的Webview窗口对象
+					var self = plus.webview.currentWebview();
+					//创建webview子页
+					var sub = plus.webview.create(
+						"search.html", //子页url
+						"search.html", //子页id
+						{
+							top: '45px',//设置距离顶部的距离
+							bottom: '0px'//设置距离底部的距离
+						},
+						{
+							songName : str
+						}
+					);
+					$("#mui-content").hide();
+					//将webview对象填充到窗口
+					self.append(sub);
+				});
+		})
+		
+		
+		
+		
+		
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
+		
+		
+	</script>
+
+</html>

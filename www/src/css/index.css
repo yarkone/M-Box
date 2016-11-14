@@ -1,0 +1,15 @@
+html,body{
+	height: 100%;
+}
+header{
+	background: url(../img/top.png) no-repeat;
+	background-size: 100% 100% !important;
+	-webkit-box-shadow: none !important;
+}
+header h1{
+	color:#FFF !important;
+}
+.mui-icon{
+	position: relative;
+	top:-2px !important;
+}

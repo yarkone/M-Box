@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/news.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">笑话</h1>
+		</header>
+		<div class="mui-content">
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/lib/zepto.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var time = new Date().getTime();
+			mui.ajax('http://japi.juhe.cn/joke/content/list.from',{
+				data:{
+					sort : "asc",
+					key : "5ee046b3c33db971e193c520a9db38e4",
+					time : time
+				},
+				dataType:'json',//服务器返回json格式数据
+				type:'get',//HTTP请求类型
+				timeout:10000,//超时时间设置为10秒；
+				success:function(data){
+					console.log(JSON.stringify(data));
+					data = data.result.data; 
+					mui.each(data,function(index,item){
+						var str = '<div class="mui-card"><div class="mui-card-header">'
+									+'<p id="title">'+ item.author_name +'</p></div>'
+									+'<div class="mui-card-content">'
+									+'<img src="'+ item.thumbnail_pic_s +'" alt="" id="img" /></div>'
+									+'<div class="mui-card-footer">'
+									+'<p id="footer">'+ item.title +'</p></div></div>';
+						$(".mui-content").append(str);
+					})
+				}, 
+				error:function(xhr,type,errorThrown){
+					
+				}
+			});
+		</script>
+	</body>
+
+</html>

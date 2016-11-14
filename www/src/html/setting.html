@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/setting.css" />
+</head>
+<body>
+	<div class="mui-content">
+	    <div class="bottom">
+	        <ul class="bottom_ul">
+	            <li><span>常见问题</span><i class="fa fa-angle-right"></i></li>
+	            <li><span>系统设置</span><i class="fa fa-angle-right"></i></li>
+	            <li><span>软件更新</span><i class="fa fa-angle-right"></i></li>
+	            <li><span>扫描二维码</span><i class="fa fa-angle-right"></i></li>
+	        </ul>
+	        <ul class="bottom_ul">
+	            <li><span>我要提意见</span><i class="fa fa-angle-right"></i></li>
+	            <li><span>关于</span><i class="fa fa-angle-right"></i></li>
+	        </ul>
+	        <a href="javascript:;" class="go_index"></a>
+	    </div>
+	</div>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+ 	<script type="text/javascript">
+ 		mui.init();
+ 			
+		var user = getUserName();
+ 		if(user){
+ 			$(".go_index").html("退出软件").on("tap",function(){
+ 				if(confirm("是否退出软件?")){
+ 					mui.plusReady(function(){
+ 						plus.runtime.quit();
+ 					});
+ 				}
+ 			});
+ 		} else {
+ 			$(".go_index").html("前往登陆").on("tap",function(){
+ 				mui.openWindow('login.html');
+ 			});
+ 		}
+			
+ 		
+ 	</script>
+</body>
+</html>

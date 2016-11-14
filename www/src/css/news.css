@@ -1,0 +1,26 @@
+
+.mui-card{
+	margin-bottom: 1rem;
+	background: #FFF;
+	display: -webkit-box;
+	padding:1rem;
+	-webkit-box-sizing: border-box;
+	-webkit-box-orient: vertical;
+}
+.mui-card-header p{
+	width:100%;
+	color:#000;
+}
+.mui-card-content img{
+	width:100%;
+}
+.mui-card-footer{
+	width:100%;
+	height:3rem;
+	line-height: 1.5rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}

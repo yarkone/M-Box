@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title> 
+    <link href="../css/mui.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/music.css" />
+
+    <style type="text/css">
+    	
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" >
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title" id="musicName"></h1>
+	</header>
+	<div class="mui-content" id="content">
+		<audio src="" id="audio"></audio>
+		<div class="song" id="songer">
+			<!-- 音量控制模块 -->
+			<div class="mui-input-row mui-input-range">
+				<input type="range" min="0" max="100" class="range" id="range">
+			</div>
+			<!-- END音量控制模块 -->
+		</div>
+		<div class="lrc" id="lrc"></div>
+		<!--<div class="time" id="time">
+			<div class="mui-input-row mui-input-range">
+				<span class="time_left">00:00:00</span>
+				<input type="range" min="0" max="100" class="timeLine" id="timeLine">
+				<span class="time_right">00:00:00</span>
+			</div>
+		</div>-->
+		<div class="control">
+			<a id="xunhuan" href="javascript:;"><span class="mui-icon iconfont icon-suijibofang"></span></a>
+			<a id="prev" href="javascript:;"><span class="mui-icon iconfont icon-tushujiemianshangyiqu40"></span></a>
+			<a id="play" href="javascript:;"><span class="mui-icon iconfont icon-zanting1"></span></a>
+			<a id="next" href="javascript:;"><span class="mui-icon iconfont icon-tushujiemianxiayiqu40"></span></a>
+			<a id="more" href="javascript:;"><span class="mui-icon mui-icon-bars"></span></a>
+		</div>
+		<div class="more">
+			<a href="javascript:;"><span class="mui-icon iconfont icon-xihuan"></span></a>
+			<a href="javascript:;"><span class="mui-icon iconfont icon-xiazai"></span></a>
+			<a href="javascript:;"><span class="mui-icon iconfont icon-yonghu"></span></a>
+			<a href="javascript:;"><span class="mui-icon iconfont icon-comments"></span></a>
+			<a href="javascript:;"><span class="mui-icon iconfont icon-share"></span></a>
+		</div>
+	</div>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+	<script type="text/javascript" src="../js/music.js"></script>
+</body> 
+</html>

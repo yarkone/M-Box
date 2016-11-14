@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/message.css"/>
+</head>
+<body>
+	<div class="mui-content">
+		<ul id="list" class="mui-table-view mui-table-view-chevron">
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right" url-data="news.html">
+					<img class="mui-media-object mui-pull-left" src="../img/80x80-1.png">
+    				<div class="mui-media-body">
+    					<p class="mui-ellipsis">资讯看看</p>
+    				</div>
+    			</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right" url-data="weather.html">
+					<img class="mui-media-object mui-pull-left" src="../img/80x80-2.png">
+    				<div class="mui-media-body">
+    					<p class="mui-ellipsis">天气查查</p>
+    				</div>
+    			</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right">
+					<img class="mui-media-object mui-pull-left" src="../img/80x80-3.png">
+    				<div class="mui-media-body">
+    					<p class="mui-ellipsis">笑话哈哈</p>
+    				</div>
+    			</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right">
+					<img class="mui-media-object mui-pull-left" src="../img/80x80-4.png">
+    				<div class="mui-media-body">
+    					<p class="mui-ellipsis">资讯看看</p>
+    				</div>
+    			</a>
+			</li>
+		</ul>
+	</div>
+	<script src="../js/mui.min.js"></script>
+    <script type="text/javascript">
+		mui.init();
+		//列表点击事件
+		mui("#list").on('tap','li a',function(){
+			var url = this.getAttribute('url-data');
+			
+			//打开详情页面
+			mui.openWindow({
+				url:url,
+			    id:url
+			});
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div id="logo" class="logo">
+				<i class="iconfont icon-music"></i><br />
+				<span class="mui-tab-label">M-Box</span>
+			</div>
+			<form action="" class="login-form">
+				<input type="text" placeholder="账号(6~18位中英文)" class="input userName" id="userName"/>
+				<input type="password" placeholder="密码(6~18位)" class="input userPassword" id="userPassword" />
+				<input type="password" placeholder="确认密码(与密码一致)" class="input userPasswordSure" id="userPasswordSure" />
+                <div class="remember">
+                    <a href="javascript:void(0)" class="forget">忘记密码？</a>
+                    <span></span>
+                    <a href="login.html" class="reg">前往登陆</a>
+                </div>
+                <input type="button" value="注册" class="input login" id="login" onclick="_register()"/>
+            </form>
+		</div>
+		<div class="mui-content-padded oauth-area">
+
+		</div>
+		<footer></footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/public.js"></script>
+		<script type="text/javascript" src="../js/register.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+</html>

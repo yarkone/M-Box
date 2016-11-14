@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>侧滑</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		
+		<style type="text/css">
+			.content{
+				width:100%;
+				height: 100%;
+				background: url(../img/play-bg.png) no-repeat;
+				background-size: 100% 100% !important;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+			}
+			dl,ul,.bottom{
+				height: 0;
+				position: relative;
+			}
+			dl{
+				-webkit-box-flex: 2.4;
+				height: 0;
+			}
+			dl dt img{
+				margin-top: 3rem;
+				height: 60px;
+				width: 60px;
+			}
+			dl dd{
+				margin-top: 1rem;
+				color: #FFF;
+			}
+			ul{
+				-webkit-box-flex: 4.7;
+				height: 0;
+				width:60%;
+				text-align: center;
+				margin: 2rem auto;
+			}
+			ul li{
+				border-bottom: 1px dashed #FFF;
+				line-height: 3rem;
+				color: #FFF;
+			}
+			.bottom{
+				-webkit-box-flex: 1;
+				height: 0;
+				display: -webkit-box;
+			}
+			.bottom a{
+				display: block;
+				-webkit-box-flex: 1;
+				width: 0;
+				color:#fff
+			}
+		</style>
+	</head>
+	<body style="text-align:center;">
+		<div class="content">
+			<dl>
+				<dt id="tou"><img src="http://temp.im/60x60/FFFFFF" alt="" /></dt>
+				<dd id="name"></dd>
+			</dl>
+			<ul>
+				<li>我的VIP</li>
+				<li>个性化中心</li>
+				<li>消息中心</li>
+				<li>免流量服务</li>
+				<li>传歌到手机</li>
+			</ul>
+			<div class="bottom">
+				<a href="javascript:;">设置</a>
+				<a href="javascript:;" id="close">注销</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../js/lib/common.js"></script>
+		<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/public.js" ></script>
+	 	<script type="text/javascript">
+			mui.init();
+			
+			mui.plusReady(function(){
+				var user = getUserName();
+		 		if(user){
+		 			$("#tou img").attr("src","../img/tou.png");
+		 			$("#name").html(user);
+		 			$("#close").html("注销");
+		 			$("#close").on("tap",function(){
+		 				localStorage.clear();
+		 				back();
+		 			});
+		 		} else {
+		 			$("#name").html("登陆");
+		 			$("#close").html("登陆");
+		 			$("#name").on("tap",function(){
+		 				mui.openWindow({
+						    url: 'login.html'
+						});
+		 				
+		 			})
+		 			$("#close").on("tap",function(){
+		 				mui.openWindow({
+						    url: 'login.html'
+						});
+		 			})
+		 		}
+			});
+	 		
+	 		
+	 		
+	 		var ws=null,wc=null;
+			// 扩展API加载完毕，现在可以正常调用扩展API 
+			function plusReady(){
+				ws=plus.webview.currentWebview();
+				// 用户点击后
+				ws.addEventListener("maskClick",function(){
+					wc.close("auto");
+				},false);
+			}
+			
+			
+			// 判断扩展API是否准备，否则监听"plusready"事件
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener("plusready",plusReady,false);
+			}
+			
+			// 显示右侧滑页面
+			function showRight(){
+				// 防止快速点击可能导致多次创建
+				if(wc){
+					return;
+				}
+				back();
+				// 开启遮罩
+//				ws.setStyle({mask:"rgba(0,0,0,0.5)"});
+				// 创建侧滑页面
+				
+				// 侧滑页面关闭后关闭遮罩
+//				wc.addEventListener('close',function(){
+//					ws.setStyle({mask:"none"});
+//					wc=null;
+//				},false);
+				// 侧滑页面加载后显示（避免白屏）
+				wc.addEventListener("loaded",function(){
+					wc.show("slide-in-right",200);
+				},false);
+			}
+	 		
+	 	</script>
+	</body>
+	
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/lib/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/home.css" />
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<div class="mui-content">
+						<nav class="main_nav" id="navs">
+							<ul class="nav_ul" id="nav_ul">
+								<li class="nav_ul_li"><a href="javascript:;" class="nav_ul_li_a active_a">精选</a></li>
+								<li class="nav_ul_li"><a href="javascript:;" class="nav_ul_li_a">排行</a></li>
+								<li class="nav_ul_li"><a href="javascript:;" class="nav_ul_li_a">歌手</a></li>
+								<li class="nav_ul_li"><a href="javascript:;" class="nav_ul_li_a">歌单</a></li>
+							</ul>
+						</nav> 
+						<ul class="tab-ul" id="tab-ul">
+			        		<li class="tab-container tab-container-active">
+								<div class="swiper-container banner" id="banner">
+						            <ul class="swiper-wrapper banner_ul">
+						                <li class="swiper-slide"><img src="../img/banner1.jpg" alt="" /></li>
+						                <li class="swiper-slide"><img src="../img/banner2.jpg" alt="" /></li>
+						                <li class="swiper-slide"><img src="../img/banner3.jpg" alt="" /></li>
+						                <li class="swiper-slide"><img src="../img/banner4.jpg" alt="" /></li>
+						            </ul>
+					            	<div class="swiper-pagination"></div>
+					        	</div>
+					        	<div class="content">
+					        		
+											<div class="view_box new_song_box">
+												<div class="title">
+													<div class="left_title"><span>新歌速递</span></div>
+													<div class="right_title"><span>更多</span><span class="mui-icon mui-icon-arrowright"></span></div>
+												</div>
+												<div class="main">
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box1.png" alt="" /></div>
+														<div class="box_p">11月最新单曲，等你来听</div>
+													</div>
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box2.png" alt="" /></div>
+														<div class="box_p">听歌涨颜值，美轮美奂，尽情享受</div>
+													</div>
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box3.png" alt="" /></div>
+														<div class="box_p">KTV必点歌曲，激情唱响。</div>
+													</div>
+												</div>
+											</div>
+											<div class="view_box new_song_box">
+												<div class="title">
+													<div class="left_title"><span>歌单推荐</span></div>
+													<div class="right_title"><span>更多</span><span class="mui-icon mui-icon-arrowright"></span></div>
+												</div>
+												<div class="main">
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box5.png" alt="" /></div>
+														<div class="box_p">手机里最值得收藏的歌曲</div>
+													</div>
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box4.png" alt="" /></div>
+														<div class="box_p">考神降临！听完开运歌门门过</div>
+													</div>
+													<div class="pic_box">
+														<div class="box_img"><img src="../img/pic_box2.png" alt="" /></div>
+														<div class="box_p">完美，你是那最炫酷的天际线</div>
+													</div>
+												</div>
+											</div>
+											<div class="view_box new_song_box">
+										<div class="title">
+											<div class="left_title"><span>热门电台</span></div>
+											<div class="right_title"><span>更多</span><span class="mui-icon mui-icon-arrowright"></span></div>
+										</div>
+										<div class="main">
+											<div class="pic_box">
+												<div class="box_img"><img src="../img/pic_box2.png" alt="" /></div>
+												<div class="box_p">休眠，午睡，宁静午后安享</div>
+											</div>
+											<div class="pic_box">
+												<div class="box_img"><img src="../img/pic_box3.png" alt="" /></div>
+												<div class="box_p">影视金曲，勾起回忆，共同唱响</div>
+											</div>
+											<div class="pic_box">
+												<div class="box_img"><img src="../img/pic_box5.png" alt="" /></div>
+												<div class="box_p">听歌涨颜值，听歌涨颜值，听歌涨颜值，</div>
+											</div>
+										</div>
+									</div>
+										
+								</div>
+							</li>
+		        			<li class="tab-container">
+					        	<div class="content">
+									
+									
+									<!--新歌榜-->
+								    <ul class="mui-table-view myMusic">
+									    <li class="mui-table-view-cell li">
+									        <a class="mui-navigate-right">
+									        	<div class="left-pic"><img src="../img/pic_box2.png" alt="" /></div>
+									        	<div class="right-pic">
+									        		<p class="p-title">新歌榜</p>
+										        	<ul class="p-list">
+										        		<li>1.初学者-薛之谦</li>
+										        		<li>2.你在终点等我-王菲</li>
+										        		<li>3.微微一笑很倾城-杨洋</li>
+										        	</ul>
+									        	</div>
+									        </a>
+									    </li>
+									</ul>
+									
+									<!--流行榜-->
+								    <ul class="mui-table-view myMusic">
+									    <li class="mui-table-view-cell li">
+									        <a class="mui-navigate-right">
+									        	<div class="left-pic"><img src="../img/pic_box1.png" alt="" /></div>
+									        	<div class="right-pic">
+									        		<p class="p-title">热歌榜</p>
+										        	<ul class="p-list">
+										        		<li>1.下完这场雨-后弦</li>
+										        		<li>2.我要你-任素汐</li>
+										        		<li>3.成都-赵雷</li>
+										        	</ul>
+									        	</div>
+									        </a>
+									    </li>
+									</ul>
+									<!--摇滚榜-->
+								    <ul class="mui-table-view myMusic">
+									    <li class="mui-table-view-cell li">
+									        <a class="mui-navigate-right">
+									        	<div class="left-pic"><img src="../img/pic_box3.png" alt="" /></div>
+									        	<div class="right-pic">
+									        		<p class="p-title">摇滚榜</p>
+										        	<ul class="p-list">
+										        		<li>1.Band 5 - 世纪组合-Beyond</li>
+										        		<li>2.生无所求-汪峰</li>
+										        		<li>3.那一年-许巍</li>
+										        	</ul>
+									        	</div>
+									        </a>
+									    </li>
+									</ul>
+									
+									<!--影视金曲榜-->
+								    <ul class="mui-table-view myMusic">
+									    <li class="mui-table-view-cell li">
+									        <a class="mui-navigate-right">
+									        	<div class="left-pic"><img src="../img/pic_box1.png" alt="" /></div>
+									        	<div class="right-pic">
+									        		<p class="p-title">影视金曲榜</p>
+										        	<ul class="p-list">
+										        		<li>1.万万没想到-贾乃亮,甜馨</li>
+										        		<li>2.我是杜拉拉 O.S.T-薛之谦</li>
+										        		<li>3.世间始终你好-莫文蔚,郑少秋</li>
+										        	</ul>
+									        	</div>
+									        </a>
+									    </li>
+									</ul>
+									<!--网络流行榜-->
+								    <ul class="mui-table-view myMusic">
+									    <li class="mui-table-view-cell li">
+									        <a class="mui-navigate-right">
+									        	<div class="left-pic"><img src="../img/pic_box2.png" alt="" /></div>
+									        	<div class="right-pic">
+									        		<p class="p-title">网络流行榜</p>
+										        	<ul class="p-list">
+										        		<li>1.下完这场雨-后弦</li>
+										        		<li>2.今生遇见你-祁隆,任妙音</li>
+										        		<li>3.怎样遇见你-孙露</li>
+										        	</ul>
+									        	</div>
+									        </a>
+									    </li>
+									</ul>
+									   
+								</div>
+		        			</li>
+		        			<li class="tab-container">
+		        				
+		        			</li>
+		        			<li class="tab-container">
+		        				
+		        			</li>
+		        		</ul>
+					</div>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	
+	<script src="../js/mui.min.js "></script>
+	<script src="../js/mui.lazyload.js"></script>
+	<script src="../js/mui.lazyload.img.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.animate.min.js"></script>
+	<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+	<script>
+		var myScroll;
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				},
+				up: {
+					auto:true,
+					callback: pullupRefresh
+				}
+			}
+		});
+		
+		
+		
+		
+		//页面初始化时，获取屏幕宽度，以便于使容器放得下屏幕
+		var _screenWidth = $(document).width();
+		$("#tab-ul").width(_screenWidth);
+		$(".tab-container").width(_screenWidth);
+		
+		//顶部导航点击
+		$(".nav_ul_li").on("tap",function(){
+			var index = $(this).index();
+			console.log(index)
+			//改变点击区域底部状态
+			console.log($(".nav_ul_li").children().eq(0));
+			$(".nav_ul_li_a").removeClass("active_a");
+			$(".nav_ul_li_a").eq(index).addClass("active_a")
+			//改变下部分容器应显示的区域
+			$(".tab-container").removeClass("tab-container-active");
+			$(".tab-container").eq(index).addClass("tab-container-active");
+			
+			
+		})
+		
+		
+		
+		
+		//子页面获取主页面的元素 
+//		console.log($('#icon-yinle', parent.document)); 
+		//swiper轮播图 
+		myScrollLoad();
+		
+		
+//		var arr = [1,2,11,16,22]
+//		for(var i = 0;i < 5;i++){
+//			$.ajax({
+//				type: "get",
+//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?format=json或xml&calback=&from=webapp_music&method=baidu.ting.billboard.billList&type="+arr[i]+"&size=10&offset=0",
+//				dataType:"jsonp",
+//				success: function(msg){
+//					console.log(JSON.stringify(msg));
+//				}
+//			});
+//		}
+		
+		
+		
+		function myScrollLoad(){
+			myScroll = new Swiper("#banner",{
+				autoplay : 4000
+			})
+		}
+		
+		
+		
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}
+		
+		
+		
+		
+		
+		
+		var count = 0;
+		/**
+		 * 上拉加载具体业务实现
+		 */
+		function pullupRefresh() {
+		setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //参数为true代表没有更多数据了。
+			}, 1500);
+		}
+		
+		
+		
+		if (mui.os.plus) {
+			mui.plusReady(function() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				}, 1000);
+
+			});
+		} else {
+			mui.ready(function() {
+				mui('#pullrefresh').pullRefresh().pullupLoading();
+			});
+		}
+		
+	</script>
+</html>

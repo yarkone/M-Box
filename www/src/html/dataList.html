@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title" id="header"></h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul id="list" class="mui-table-view mui-table-view-chevron">
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/lib/zepto.min.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			var listName;
+			mui.plusReady(function(){
+				var self = plus.webview.currentWebview();
+				listName = self.title;
+				$("#header").text(listName);
+				
+				console.log(listName)
+				if(listName == "最近播放"){
+					var _value = JSON.parse(localStorage.getItem("history"));
+					if(_value){
+						var list = document.getElementById("list");
+						$.each(_value,function(index,item){
+							console.log(item.musicId)
+							var id = item.musicId,
+						        	author = item.author,
+						    		picUrl = item.picUrl,
+						    		audio = item.audioUrl;	  
+						    		musicName = item.musicName;
+							
+							
+							var li = document.createElement('li');
+							li.className = 'mui-table-view-cell mui-media';
+							li.innerHTML = '<a class="mui-navigate-right" id='+ id +' data-audio='+ audio +' author='+ author +' musicName='+ musicName +' picUrl="'+ picUrl +'">'+
+								    				'<img class="mui-media-object mui-pull-left" src="'+picUrl+'">'+
+								    				'<div class="mui-media-body">'+musicName+
+								    					'<p class="mui-ellipsis">'+author+'</p>'+
+								    				'</div>'+
+								    			'</a>';
+							list.appendChild(li);
+						});
+						
+					} else {
+						console.log(1)
+					}
+				}else if(listName == "全部歌曲"){
+					var list = document.getElementById("list");
+					$.getJSON("../lib/gedan.json",function(data){
+						mui.each(data,function(index,item){
+							
+						
+						var li = document.createElement('li');
+							li.className = 'mui-table-view-cell mui-media';
+							li.innerHTML = '<a class="mui-navigate-right" id='+ item.musicId +' data-audio='+ item.audioUrl +' author='+ item.author +' musicName='+ item.musicName +' picUrl="'+ item.picUrl +'">'+
+								    				'<img class="mui-media-object mui-pull-left" src="'+item.picUrl+'">'+
+								    				'<div class="mui-media-body">'+item.musicName+
+								    					'<p class="mui-ellipsis">'+item.author+'</p>'+
+								    				'</div>'+
+								    			'</a>';
+							list.appendChild(li);
+						});
+					})
+				}
+			});
+			
+			//列表点击事件
+			mui("#list").on('tap','li a',function(){
+				var id = this.getAttribute('id');
+				var audio = this.getAttribute('data-audio');
+				var author = this.getAttribute('author');
+				var musicName = this.getAttribute('musicName');
+				var picUrl = this.getAttribute('picUrl');
+				
+				//打开详情页面
+				mui.openWindow({
+					url:'music.html',
+				    id:'music.html',
+				    extras:{
+				        musicId:id,
+				        audioUrl:audio,
+				        author: author,
+				        musicName:musicName,
+				        picUrl:picUrl
+				    }
+				});
+			});
+		</script>
+	</body>
+
+</html>

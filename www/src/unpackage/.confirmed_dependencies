@@ -1,0 +1,284 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "html/home.html",
+      "css/index.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "img/top.png",
+      "css/public.css",
+      "js/lib/iscroll-min.js",
+      "js/lib/zepto.min.js",
+      "js/lib/immersed.js",
+      "css/common.css",
+      "html/my.html"
+    ],
+    "refer": [
+      "html/setting.html",
+      "html/message.html",
+      "html/home.html",
+      "html/my.html",
+      "html/webview_mask_side.html",
+      "html/search-main.html",
+      "html/search.html",
+      "html/zone.html",
+      "html/login.html"
+    ]
+  },
+  "html/home.html": {
+    "resources": [
+      "img/60x60.gif",
+      "js/mui.lazyload.js",
+      "js/mui.lazyload.img.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "img/banner2.jpg",
+      "img/banner4.jpg",
+      "css/app.css",
+      "js/lib/swiper.animate.min.js",
+      "img/footer.png",
+      "img/banner1.jpg",
+      "css/lib/swiper-3.3.1.min.css",
+      "img/banner3.jpg",
+      "js/lib/swiper-3.3.1.min.js",
+      "css/public.css",
+      "css/home.css",
+      "img/pic_box1.png",
+      "img/pic_box3.png",
+      "img/pic_box2.png",
+      "html/search.html",
+      "js/lib/zepto.min.js",
+      "img/moren.jpg",
+      "img/pic_box5.png",
+      "img/pic_box4.png"
+    ],
+    "refer": [
+      "html/music.html",
+      "html/login.html",
+      "html/search.html",
+      "html/search-main.html"
+    ]
+  },
+  "html/music.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "css/music.css",
+      "css/iconfont.css",
+      "css/public.css",
+      "img/play-bg.png",
+      "fonts/iconfont.ttf",
+      "js/music.js",
+      "js/lib/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "html/message.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/60x60.gif",
+      "img/80x80-4.png",
+      "img/80x80-3.png",
+      "img/80x80-2.png",
+      "img/80x80-1.png",
+      "css/message.css"
+    ],
+    "refer": [
+      "html/weather.html",
+      "html/news.html"
+    ]
+  },
+  "html/login.html": {
+    "resources": [
+      "css/login.css",
+      "fonts/mui.ttf",
+      "img/login-bg.png",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "css/public.css",
+      "js/login.js",
+      "index.html",
+      "html/home.html",
+      "js/public.js",
+      "js/lib/zepto.min.js",
+      "html/register.html"
+    ],
+    "refer": [
+      "index.html",
+      "html/my.html",
+      "html/setting.html",
+      "html/message.html",
+      "html/home.html",
+      "html/webview_mask_side.html",
+      "html/zone.html",
+      "html/register.html"
+    ]
+  },
+  "html/register.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/login.css",
+      "img/login-bg.png",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "css/public.css",
+      "js/app.js",
+      "js/mui.enterfocus.js",
+      "js/register.js",
+      "html/login.html"
+    ],
+    "refer": [
+      "html/login.html"
+    ]
+  },
+  "html/webview_mask_side.html": {
+    "resources": [
+      "js/lib/common.js",
+      "img/play-bg.png",
+      "css/mui.min.css",
+      "css/public.css",
+      "js/mui.js",
+      "js/public.js",
+      "html/login.html",
+      "html/home.html",
+      "js/lib/zepto.min.js"
+    ],
+    "refer": [
+      "html/login.html",
+      "html/my.html",
+      "html/setting.html",
+      "html/message.html",
+      "html/home.html",
+      "index.html"
+    ]
+  },
+  "html/my.html": {
+    "resources": [
+      "css/my.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "css/public.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "img/60x60.gif",
+      "img/tou.png",
+      "img/pic_box3.png",
+      "img/pic_box2.png",
+      "img/pic_box1.png",
+      "img/xihuan.jpg",
+      "img/moren.jpg",
+      "js/my.js",
+      "js/lib/zepto.min.js",
+      "js/public.js",
+      "lib/gedan.json"
+    ],
+    "refer": [
+      "html/dataList.html"
+    ]
+  },
+  "html/search.html": {
+    "resources": [
+      "img/60x60.gif",
+      "css/home.css",
+      "js/mui.min.js",
+      "css/app.css",
+      "js/lib/swiper.animate.min.js",
+      "css/mui.min.css",
+      "css/lib/swiper-3.3.1.min.css",
+      "css/public.css",
+      "js/mui.lazyload.js",
+      "js/lib/swiper-3.3.1.min.js",
+      "js/mui.lazyload.img.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "html/music.html"
+    ]
+  },
+  "html/search-main.html": {
+    "resources": [
+      "html/search.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/lib/zepto.min.js",
+      "css/public.css"
+    ],
+    "refer": [
+      "html/search.html"
+    ]
+  },
+  "html/setting.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/public.css",
+      "css/setting.css",
+      "img/login-bg.png",
+      "js/public.js",
+      "js/lib/zepto.min.js",
+      "js/mui.js"
+    ],
+    "refer": [
+      "html/login.html"
+    ]
+  },
+  "html/zone.html": {
+    "resources": [
+      "js/lib/common.js",
+      "img/play-bg.png",
+      "js/public.js",
+      "css/mui.min.css",
+      "js/lib/zepto.min.js",
+      "css/public.css",
+      "js/mui.js",
+      "js/mui.min.js",
+      "img/tou.png"
+    ],
+    "refer": [
+      "html/login.html"
+    ]
+  },
+  "html/dataList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/lib/zepto.min.js",
+      "lib/gedan.json"
+    ],
+    "refer": [
+      "html/music.html"
+    ]
+  },
+  "html/news.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/app.css",
+      "img/cbd.jpg",
+      "css/news.css",
+      "js/lib/zepto.min.js"
+    ]
+  },
+  "html/weather.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/lib/zepto.min.js"
+    ]
+  }
+}
